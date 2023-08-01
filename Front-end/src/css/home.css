@@ -1,0 +1,420 @@
+/* ###################################### */
+/* ###################################### */
+/* -------------- landing cover --------- */
+/* ###################################### */
+/* ###################################### */
+
+main {
+  margin-top: 10vh;
+}
+
+main .home {
+  background-image: url(/public/images/car1.jpg);
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  animation: change 10s infinite ease-out;
+  animation-delay: 5s;
+  height: min(85vh, 600px);
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  gap: 0.25rem;
+  padding: 0 10vw;
+}
+
+@keyframes change {
+
+  0%,
+  100% {
+    background-image: url(/public/images/car1.jpg);
+    animation-duration: 1ms;
+    animation-delay: 5s;
+  }
+
+  35% {
+    background-image: url(/public/images/car10.jpg);
+    animation-duration: 1ms;
+    animation-delay: 5s;
+  }
+
+  70% {
+    background-image: url(/public/images/car9.jpg);
+    animation-duration: 1ms;
+    animation-delay: 10s;
+  }
+}
+
+span {
+  color: #0e2954;
+}
+
+main .home h1 {
+  color: white;
+  padding: 15px;
+  font-size: 2.6rem;
+  width: fit-content;
+  transform: translateY(-30%) skewX(10deg);
+  background-color: #0e2954;
+}
+
+main .home h1:nth-child(2) {
+  transform: translate(50px, -30%) skewX(10deg);
+}
+
+@media screen and (max-width: 1000px) {
+  main .home {
+    display: none;
+  }
+}
+
+/* ####################################################### */
+/* ####################################################### */
+/* -------------- section one ------------------------------- */
+/* ####################################################### */
+/* ####################################################### */
+.section-one {
+  background-color: #f5f5f5;
+  box-shadow: 0 0 14px -6px #6a6a6a;
+  padding: 10px;
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+  gap: 2rem;
+}
+
+.section-one h3 {
+  font-size: 40px;
+  font-weight: solid;
+}
+
+/* .section-one .btn-filter {
+    margin-top: -50%;
+} */
+
+.section-one .filters {
+  padding: 20px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 2rem;
+}
+
+.section-one .filter {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 0.75rem;
+}
+
+.section-one .filters h5 {
+  font-size: 1.15rem;
+}
+
+.section-one .customCheckBoxHolder {
+  margin: 5px;
+  display: flex;
+}
+
+.section-one .customCheckBox {
+  width: fit-content;
+  position: relative;
+  overflow: hidden;
+  cursor: pointer;
+  user-select: none;
+  padding: 2px 8px;
+  background-color: rgba(82, 82, 82, 0.349);
+  border-radius: 0px;
+  color: rgba(255, 255, 255, 0.7);
+  transition-timing-function: cubic-bezier(0.25, 0.8, 0.25, 1);
+  transition-duration: 300ms;
+  transition-property: color, background-color, box-shadow;
+  display: flex;
+  height: 32px;
+  align-items: center;
+  box-shadow: rgba(0, 0, 0, 0.15) 0px 2px 1px 0px inset,
+    rgba(255, 255, 255, 0.17) 0px 1px 1px 0px;
+  outline: none;
+  justify-content: center;
+  min-width: 55px;
+}
+
+.section-one .customCheckBox:hover {
+  background-color: #2c2c2c;
+  color: white;
+  box-shadow: rgba(0, 0, 0, 0.23) 0px -4px 1px 0px inset,
+    rgba(255, 255, 255, 0.17) 0px -1px 1px 0px,
+    rgba(0, 0, 0, 0.17) 0px 2px 4px 1px;
+}
+
+.section-one .customCheckBox .inner {
+  font-size: 18px;
+  font-weight: 900;
+  pointer-events: none;
+  transition-timing-function: cubic-bezier(0.25, 0.8, 0.25, 1);
+  transition-duration: 300ms;
+  transition-property: transform;
+  transform: translateY(0px);
+}
+
+.section-one .customCheckBox:hover .inner {
+  transform: translateY(-2px);
+}
+
+.section-one .customCheckBoxWrapper:first-of-type .customCheckBox {
+  border-bottom-left-radius: 5px;
+  border-top-left-radius: 5px;
+  border-right: 0px;
+}
+
+.section-one .customCheckBoxWrapper:last-of-type .customCheckBox {
+  border-bottom-right-radius: 5px;
+  border-top-right-radius: 5px;
+  border-left: 0px;
+}
+
+.section-one .customCheckBoxInput {
+  display: none;
+}
+
+.section-one .customCheckBoxInput:checked+.customCheckBoxWrapper .customCheckBox {
+  background-color: #301e67;
+  color: white;
+  box-shadow: rgba(0, 0, 0, 0.23) 0px -4px 1px 0px inset,
+    rgba(255, 255, 255, 0.17) 0px -1px 1px 0px,
+    rgba(0, 0, 0, 0.17) 0px 2px 4px 1px;
+}
+
+.section-one .customCheckBoxInput:checked+.customCheckBoxWrapper .customCheckBox .inner {
+  transform: translateY(-2px);
+}
+
+.section-one .customCheckBoxInput:checked+.customCheckBoxWrapper .customCheckBox:hover {
+  background-color: #301e67;
+  box-shadow: rgba(0, 0, 0, 0.26) 0px -4px 1px 0px inset,
+    rgba(255, 255, 255, 0.17) 0px -1px 1px 0px,
+    rgba(0, 0, 0, 0.15) 0px 3px 6px 2px;
+}
+
+.section-one .customCheckBoxWrapper .customCheckBox:hover .inner {
+  transform: translateY(-2px);
+}
+
+@media (max-width: 675px) {
+  .section-one .filters {
+    flex-direction: column;
+  }
+}
+
+/* ####################################################### */
+/* ####################################################### */
+/* -------------- section two ------------------------------- */
+/* ####################################################### */
+/* ####################################################### */
+.sectionThree {
+  margin-top: 2.5rem;
+}
+
+.tout {
+  width: min(1050px, 98%);
+  margin: 0 auto;
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+  justify-content: center;
+  grid-gap: 50px 30px;
+}
+
+.sectionThree .card {
+  min-height: 270px;
+  border-radius: 5px;
+  background-color: #f5f5f5;
+  box-shadow: 0px 0px 30px -19px #272727;
+  transition: all 0.3s ease-in-out;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+
+.sectionThree .card:hover {
+  box-shadow: 0px 0px 30px -6px #272727;
+}
+
+.sectionThree .card .infos {
+  flex: 1;
+  background-color: white;
+  display: flex;
+  flex-direction: column;
+  padding: 10px 5px;
+  justify-content: space-around;
+}
+
+.sectionThree .card img {
+  width: 100%;
+  max-height: 120px;
+  object-fit: contain;
+}
+
+.sectionThree .card .button {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: #0e2954;
+  border: solid 1px #0e2954;
+  color: #c4dfdf;
+  width: fit-content;
+  gap: 0.5rem;
+  align-self: center;
+  padding: 8px;
+  border-radius: 5px;
+  transition: all 0.15s ease-in-out;
+  cursor: pointer;
+  margin-top: 10px;
+}
+
+.sectionThree .card a {
+  color: #c4dfdf;
+  border: none;
+  text-decoration: none;
+  transition: all 0.15s ease-in-out;
+}
+
+.sectionThree .card .button:hover {
+  background-color: white;
+  color: #0e2954;
+}
+
+.sectionThree .card .button:hover a {
+  color: #0e2954;
+}
+
+.card .infos h1 {
+  font-size: 20px;
+}
+
+/* ####################################################### */
+/* ####################################################### */
+/* -------------- section three ------------------------------- */
+/* ####################################################### */
+/* ####################################################### */
+
+.about-section {
+  min-height: min(700px, 85vh);
+  background-color: #fdfdfd;
+  overflow: hidden;
+  margin: 100px 0 50px;
+  display: flex;
+  justify-content: center;
+}
+
+.about-section .cover {
+  flex: 70%;
+  background: url(/public/images/car1.jpg) no-repeat;
+  background-size: cover;
+}
+
+.about-section .infos {
+  background-color: #fdfdfd;
+  border: 1px solid rgba(0, 0, 0, 0.233);
+  padding: 50px 20px;
+}
+
+.about-section .infos h4 {
+  font-size: 2rem;
+  font-weight: 500;
+  margin-bottom: 1.5rem;
+}
+
+.about-section .infos p {
+  text-align: start;
+  font-size: 1.05rem;
+  line-height: 1.75;
+}
+
+@media (max-width: 1000px) {
+  .about-section {
+    min-height: auto;
+  }
+}
+
+@media (max-width: 900px) {
+  .about-section .cover {
+    display: none;
+  }
+}
+
+/* ####################################################### */
+/* ####################################################### */
+/* -------------- Testimonials ------------------------------- */
+/* ####################################################### */
+/* ####################################################### */
+
+.testimonial-section {
+  text-align: center;
+  margin: 1rem 0;
+  padding: 3rem 0;
+}
+
+.testimonial-title {
+  font-size: 2.05rem;
+  margin-bottom: 20px;
+}
+
+.testimonial-container {
+  width: min(750px, 98%);
+  margin: 0 auto;
+  display: flex;
+  justify-content: space-evenly;
+  align-items: center;
+  gap: 20px;
+}
+
+.testimonial {
+  background-color: #f8f8f8;
+  padding: 20px;
+  border-radius: 8px;
+  max-width: 300px;
+}
+
+.testimonial-message {
+  font-size: 1.1rem;
+  line-height: 1.5;
+  margin-bottom: 10px;
+}
+
+.testimonial-author {
+  font-size: 16px;
+  font-style: italic;
+}
+
+@media (max-width: 1000px) {
+  .testimonial-container {
+    flex-direction: column;
+  }
+}
+
+/* ####################################################### */
+/* ####################################################### */
+/* -------------- Contacts ------------------------------- */
+/* ####################################################### */
+/* ####################################################### */
+
+footer {
+  background-color: #0e2954;
+  color: #eee;
+  padding: 20px;
+}
+
+footer h4 {
+  font-size: 1.3rem;
+}
+
+footer .social {
+  margin-top: 0.5rem;
+  font-size: 25px;
+}
+
+footer a {
+  cursor: pointer;
+  margin-left: 1%;
+  color: #eee;
+}

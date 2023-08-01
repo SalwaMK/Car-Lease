@@ -1,0 +1,154 @@
+.profile {
+  padding: 20px;
+}
+
+.profile h2 {
+  text-align: center;
+  margin: 1rem 0 3rem;
+  font-size: 2rem;
+  position: relative;
+  color: #0e2954;
+}
+
+.profile h2::after {
+  content: "";
+  position: absolute;
+  left: 50%;
+  transform: translateX(-50%);
+  bottom: -0.75rem;
+  width: 40px;
+  height: 3px;
+  border-radius: 3px;
+  background-color: #007ae9;
+}
+
+.profile .back-btn {
+  position: absolute;
+  top: calc(1rem + 20px);
+  left: 50px;
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+}
+
+.profile .back-btn span {
+  font-size: 1.05rem;
+  font-weight: bold;
+  color: #777;
+  cursor: pointer;
+}
+
+.profile .back-btn span:hover {
+  text-decoration: underline;
+}
+
+.profile h4 {
+  text-align: center;
+  color: grey;
+  margin: 1.5rem 0;
+}
+
+.profile .user-infos {
+  margin-bottom: 4rem;
+}
+
+.profile .user-infos h3,
+.profile .booking-infos h3 {
+  font-size: 1.5rem;
+  margin-bottom: 1.25rem;
+  position: relative;
+  color: #0e2954;
+}
+
+.profile .user-infos h3::after,
+.profile .booking-infos h3::after,
+.profile .booking-history h3::after {
+  content: "";
+  position: absolute;
+  left: 0;
+  bottom: -0.5rem;
+  width: min(450px, 90%);
+  height: 1px;
+  background-color: #ccc;
+}
+
+.profile .user-infos .infos {
+  width: min(600px, 100%);
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  row-gap: 0.5rem;
+}
+
+.profile .booking-infos {
+  margin-bottom: 3rem;
+}
+
+.profile .table-container {
+  overflow-x: auto;
+  max-width: 100vw;
+}
+
+span {
+  color: #006e83;
+}
+
+table {
+  border-collapse: collapse;
+  width: 100%;
+}
+
+td:nth-child(2) {
+  font-weight: bold;
+}
+
+td,
+th {
+  border: 1px solid #dddddd;
+  text-align: left;
+  padding: 12px;
+  min-width: 120px;
+}
+
+tr:nth-child(even) {
+  background-color: #dddddd7e;
+}
+
+.profile .end-btn-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.profile .end-btn-container div {
+  padding: 5px 10px;
+  border-radius: 5px;
+  background-color: #ffc107;
+  cursor: pointer;
+  /* width: fit-content; */
+}
+
+.profile .end-btn-container div:hover {
+  background-color: #e0a800;
+}
+
+.profile .booking-history {
+  margin-bottom: 2rem;
+}
+
+.profile .booking-history summary {
+  font-size: 1.5rem;
+  font-weight: bold;
+  margin-bottom: 1.25rem;
+}
+
+@media (max-width: 500px) {
+  .profile {
+    padding: 10px;
+  }
+
+  .profile .back-btn {
+    top: calc(1rem + 10px);
+    left: 10px;
+    transform: translateY(50%);
+  }
+}

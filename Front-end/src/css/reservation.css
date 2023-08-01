@@ -1,0 +1,193 @@
+.reservation h3 {
+  text-align: center;
+  margin: 1rem 0 3rem;
+  font-size: 2rem;
+  position: relative;
+}
+.reservation h3::after {
+  content: "";
+  position: absolute;
+  left: 50%;
+  transform: translateX(-50%);
+  bottom: -0.75rem;
+  width: 40px;
+  height: 3px;
+  border-radius: 3px;
+  background-color: #007ae9;
+}
+
+.reservation .back-btn {
+  position: absolute;
+  top: calc(1rem + 20px);
+  left: 50px;
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+}
+
+.reservation .back-btn span {
+  font-size: 1.05rem;
+  font-weight: bold;
+  color: #777;
+  cursor: pointer;
+}
+.reservation .back-btn span:hover {
+  text-decoration: underline;
+}
+
+.reservation main {
+  width: min(950px, 98%);
+  margin: 0 auto;
+  margin-top: 2rem;
+  display: flex;
+  justify-content: center;
+}
+
+.reservation .car-infos {
+  border: solid 1px #ccc;
+  padding: 1rem;
+  flex: 1;
+  border-radius: 7px 0 0 7px;
+  border-right-color: transparent;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  align-items: center;
+}
+.reservation .car-infos img {
+  width: min(80%, 220px);
+  height: 100%;
+  object-fit: cover;
+  border: solid 1px #e0e0e0;
+}
+.reservation .car-infos .infos {
+  margin: 1.75rem 0;
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  row-gap: 0.75rem;
+  align-self: stretch;
+}
+
+.reservation .car-infos .infos .title {
+  font-weight: 600;
+}
+
+.reservation .car-infos .infos div:not(.title) {
+}
+.reservation .reservation-input {
+  border: solid 1px #ccc;
+  border-radius: 0 7px 7px 0;
+  flex: 2;
+  display: flex;
+  align-items: center;
+  padding: 20px;
+}
+
+.reservation .reservation-input form {
+  width: 90%;
+  margin: 0 auto;
+  display: flex;
+  flex-direction: column;
+  padding: 20px 5px;
+  gap: 1rem;
+}
+
+.reservation .reservation-input .input {
+  display: flex;
+  justify-content: space-between;
+  gap: 2rem;
+}
+.reservation .reservation-input .input label {
+  flex: 2;
+  font-weight: 600;
+}
+
+.reservation .reservation-input .input input {
+  flex: 3;
+  font-size: 1rem;
+  padding: 0.5rem;
+  border: solid 1px #ccc;
+  border-radius: 5px;
+}
+
+.reservation .reservation-input .footer {
+  margin-top: 2rem;
+  display: flex;
+  justify-content: flex-end;
+  align-items: center;
+  gap: 1rem;
+}
+
+.reservation .reservation-input .footer button {
+  padding: 0.5rem 1.5rem;
+  border: none;
+  border-radius: 5px;
+  background-color: #007ae9;
+  color: white;
+  font-size: 1rem;
+  cursor: pointer;
+  transition: all 0.15s ease-in-out;
+}
+.reservation .reservation-input .footer .cancel-btn {
+  font-size: 1rem;
+  cursor: pointer;
+}
+.reservation .reservation-input .footer .cancel-btn:hover {
+  text-decoration: underline;
+}
+.reservation .reservation-input .footer button:disabled {
+  opacity: 0.75;
+  cursor: not-allowed;
+}
+.reservation .reservation-input .footer button:disabled:hover {
+  background-color: #007ae9;
+}
+
+.reservation .reservation-input .footer button:hover {
+  background-color: #0061b9;
+}
+
+.reservation .reservation-input .footer .form-loading-spinner {
+  width: 20px;
+  height: 20px;
+  position: relative;
+  border: solid 3px black;
+  border-radius: 50%;
+  border-top-color: transparent;
+  animation: rotate 1s linear infinite;
+}
+
+@keyframes rotate {
+  100% {
+    transform: rotate(360deg);
+  }
+}
+
+@media (max-width: 870px) {
+  .reservation main {
+    padding: 5px;
+    flex-direction: column;
+  }
+  .reservation .car-infos {
+    border-radius: 7px 7px 0 0;
+    border-right-color: #ccc;
+    border-bottom-color: transparent;
+  }
+
+  .reservation .reservation-input {
+    border-radius: 0 0 7px 7px;
+  }
+
+  .reservation .reservation-input .input {
+    flex-direction: column;
+    gap: 0.75rem;
+  }
+
+  .reservation .reservation-input form {
+    width: 100%;
+  }
+
+  .reservation .back-btn {
+    display: none;
+  }
+}

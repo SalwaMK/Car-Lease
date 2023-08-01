@@ -1,0 +1,142 @@
+nav {
+  width: 100%;
+  position: fixed;
+  top: 0;
+  left: 0;
+  z-index: 1000;
+  justify-content: center;
+  align-items: center;
+  display: flex;
+  justify-content: space-evenly;
+  align-items: stretch;
+  background-color: #f5f5f5;
+  box-shadow: 0 0 14px -6px #6a6a6a;
+  min-height: 10vh;
+}
+
+nav .menu {
+  display: flex;
+}
+
+nav .burger {
+  display: none;
+}
+
+nav h1 {
+  font-size: 30px;
+}
+
+nav .logo {
+  display: flex;
+  align-items: center;
+}
+
+nav .logo h1 {
+  margin-left: 20px;
+}
+
+nav .logo .car-logo {
+  font-size: 30px;
+  color: #0e2954;
+}
+
+nav .menu ul {
+  display: flex;
+}
+
+nav .menu ul li {
+  list-style: none;
+  padding: 10px;
+  font-size: 1.25rem;
+  transition: all 0.3s ease;
+  display: flex;
+  align-items: center;
+}
+
+nav .menu ul li a {
+  color: #051022;
+  text-decoration: none;
+  /*font-size: 30px;*/
+}
+
+nav .menu .logout-btn {
+  color: rgb(138, 0, 0);
+  padding: 10px;
+  font-size: 1.25rem;
+  transition: all 0.3s ease;
+  display: flex;
+  align-items: center;
+  cursor: pointer;
+}
+nav .menu .logout-btn:hover {
+  color: rgb(194, 0, 0);
+}
+
+nav .menu ul li:hover {
+  color: #eee;
+  background-color: #7ac8ff;
+  /*border-radius: 50px;*/
+  /*border-bottom: 2px solid #11009E;*/
+  padding: 10px;
+  cursor: pointer;
+}
+
+nav .dropdown-menu {
+  display: none;
+}
+
+@media (max-width: 850px) {
+  nav .menu {
+    display: none;
+  }
+
+  nav .logo h1 {
+    margin-left: 5px;
+  }
+  nav {
+    padding: 0 20px;
+    align-items: center;
+    justify-content: space-between;
+    flex-wrap: wrap;
+  }
+  nav .burger {
+    display: block;
+    font-size: 30px;
+    cursor: pointer;
+    display: flex;
+    justify-content: flex-end;
+  }
+  nav > * {
+    flex: 50%;
+  }
+
+  nav .dropdown-menu {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 0;
+    padding: 0;
+    overflow: hidden;
+    transition: all 0.3s ease;
+    transform-origin: top;
+    align-self: flex-end;
+  }
+  nav .dropdown-menu ul {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+  }
+  nav .dropdown-menu ul li,
+  nav .dropdown-menu .logout-btn {
+    list-style: none;
+    transition: all 0.3s ease;
+    align-items: center;
+  }
+
+  nav .dropdown-menu ul li a,
+  nav .dropdown-menu .logout-btn a {
+    text-decoration: none;
+    color: #051022;
+    font-weight: 600;
+  }
+}

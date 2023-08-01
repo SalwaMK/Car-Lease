@@ -1,0 +1,151 @@
+.sign {
+  background-image: url(/public/images/car4.jpg);
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  min-height: 100vh;
+}
+
+.sign .form {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  max-width: 400px;
+  background-color: #eee;
+  padding: 20px;
+  border-radius: 20px;
+  box-shadow: 5px 5px 10px #e5d8df;
+  position: relative;
+  /*width: 80%;*/
+  /*justify-content: center;
+    align-items: center;
+    position: relative;*/
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, 5%);
+}
+
+.sign .title {
+  font-size: 28px;
+  color: #0e2954;
+  font-weight: 600;
+  letter-spacing: -1px;
+  position: relative;
+  display: flex;
+  align-items: center;
+  padding-left: 30px;
+}
+
+.sign .title::before,
+.sign .title::after {
+  position: absolute;
+  content: "";
+  height: 16px;
+  width: 16px;
+  border-radius: 50%;
+  left: 0px;
+  background-color: #0e2954;
+}
+
+.sign .title::before {
+  width: 18px;
+  height: 18px;
+  background-color: #0e2954;
+}
+
+.sign .title::after {
+  width: 18px;
+  height: 18px;
+  animation: pulse 1s linear infinite;
+}
+
+.sign .message,
+.sign .signin {
+  color: rgba(88, 87, 87, 0.822);
+  font-size: 14px;
+}
+
+.sign .signin {
+  text-align: center;
+}
+
+.sign .signin a {
+  color: #0e2954;
+}
+
+.sign .signin a:hover {
+  text-decoration: underline #0e2954;
+}
+
+/*.flex {
+    display: flex;
+    width: 100%;
+    gap: 6px;
+}*/
+
+.sign .form label {
+  position: relative;
+}
+
+.sign .form label .input {
+  width: 95%;
+  padding: 10px 10px 20px 10px;
+  outline: 0;
+  border: 1px solid rgba(105, 105, 105, 0.397);
+  border-radius: 10px;
+}
+
+.sign .form label .input + span {
+  position: absolute;
+  left: 10px;
+  top: 15px;
+  color: grey;
+  font-size: 0.9em;
+  cursor: text;
+  transition: 0.3s ease;
+}
+
+.sign .form label .input:placeholder-shown + span {
+  top: 15px;
+  font-size: 0.9em;
+}
+
+.sign .form label .input:focus + span,
+.sign .form label .input:valid + span {
+  top: 30px;
+  font-size: 0.7em;
+  font-weight: 600;
+}
+
+.sign .form label .input:valid + span {
+  color: green;
+}
+
+.sign .submit {
+  border: none;
+  outline: none;
+  background-color: #0e2954;
+  padding: 10px;
+  border-radius: 10px;
+  color: #fff;
+  font-size: 16px;
+  transform: 0.3s ease;
+  text-decoration: none;
+}
+
+.sign .submit:hover {
+  background-color: #301e67;
+  cursor: pointer;
+}
+
+@keyframes pulse {
+  from {
+    transform: scale(0.9);
+    opacity: 1;
+  }
+
+  to {
+    transform: scale(1.8);
+    opacity: 0;
+  }
+}
